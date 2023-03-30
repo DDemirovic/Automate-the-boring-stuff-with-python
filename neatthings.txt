@@ -1,0 +1,29 @@
+Liste/array mit range(i), natürlich kann man da auch die Eigenschaften von range(start, stop, schrittweite) anwenden
+	list(range(i)) 
+
+
+For Schleife mit der Länge der Liste
+	for i in range(len(someList))
+
+multiple assignments
+	cat = ['orange', 'fat', 'loud']
+	color, bodyType, behaviour = cat
+
+Dreiecksswap
+	a, b = b, a
+
+augmented operators
+	spam = spam + 1    => spam += 1	//	spam -= 1	//	spam *= 1	//	spam /= 1	//	spam %= 1
+
+List .sort Keywörter
+	spam.sort(reverse=True) = sortiert in umgekehrter Reihenfolge
+	spam.sort(key=str.lower) = ignoriert die Standard Reihenfolge, dass uppercase immer vorm lowercase kommt (quasi ['A', 'Z', 'a', 'z'] dann wird daraus ['A', 'a', 'Z', 'z']
+
+\ in einer Zeile ist quasi ein "ignorier das Ende vom Block, es geht noch weiter" (damit es leserlicher wird)
+
+dictionary
+
+	countries={"Ghana": "Accra", "China": "Beijing"}
+	# using the del keyword
+	del countries["China"]
+	nun ist countries ={"Ghana": "Accra}
