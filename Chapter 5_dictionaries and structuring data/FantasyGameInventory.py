@@ -4,7 +4,7 @@ def displayInventory(inventory):
     item_total = 0
     for keys, values in inventory.items():
         item_total = item_total + inventory[keys]   #inventory[keys] = the associated number for that specific key in the loop
-        print(f"{keys}: {values}")  #f-string is "super important", otherwhise output would be "key : value", the space between key and ":" is unneeded
+        print(f"{keys}: {values}")  #f-string is "super important", otherwise output would be "key : value", the space between key and ":" is unneeded
     print(f"Total number of items: {item_total}")
 
 def addToInventory(inventory,loot):     #addToInventory(someDictionary,someList)
