@@ -89,78 +89,6 @@ def checkSpots(board):
     
     return boardValidity
 
-#functions that checks validity of a board // number of chess pieces (e.g not more than one king per team) & real spots on the board (e.g X3 is not a spot on a usual chess board)
-#my previous attempt, this is still there to remind me where it started
-def validityPieces(board):
-#     wRookChecker = 0
-#     wBishopChecker = 0
-#     wKnightChecker = 0
-#     wKingChecker = 0
-#     wQueenChecker = 0
-#     wPawnChecker = 0
-
-#     bRookChecker = 0
-#     bBishopChecker = 0
-#     bKnightChecker = 0
-#     bKingChecker = 0
-#     bQueenChecker = 0
-#     bPawnChecker = 0
-
-#     for key, value in board.items():
-#         if board[key] != "":
-#             if board[key] == "wRook":
-#                 wRookChecker += 1
-#             if board[key] == "wBishop":
-#                 wBishopChecker += 1
-#             if board[key] == "wKnight":
-#                 wKnightChecker += 1
-#             if board[key] == "wKing":
-#                 wKingChecker += 1
-#             if board[key] == "wQueen":
-#                 wQueenChecker += 1
-#             if board[key] == "wPawn":
-#                 wPawnChecker += 1
-#             if board[key] == "bRook":
-#                 bRookChecker += 1
-#             if board[key] == "bBishop":
-#                 bBishopChecker += 1
-#             if board[key] == "bKnight":
-#                 bKnightChecker += 1
-#             if board[key] == "bKing":
-#                 bKingChecker += 1
-#             if board[key] == "bQueen":
-#                 bQueenChecker += 1
-#             if board[key] == "bPawn":
-#                 bPawnChecker += 1
-#     if wRookChecker > 2:
-#         print("White team has more than the usual amount of rooks.")
-#     if wBishopChecker > 2:
-#         print("White team has more than the usual amount of bishops.")
-#     if wKnightChecker > 2:
-#         print("White team has more than the usual amount of knights.")
-#     if wKingChecker > 1:
-#         print("White team has more than the usual amount of kings.")
-#     if wQueenChecker > 1:
-#         print("White team has more than the usual amount of queens.")
-#     if wPawnChecker > 8:
-#         print("White team has more than the usual amount of pawns.")
-#     if bRookChecker > 2:
-#         print("Black team has more than the usual amount of rooks.")
-#     if bBishopChecker > 2:
-#         print("Black team has more than the usual amount of bishops.")
-#     if bKnightChecker > 2:
-#         print("Black team has more than the usual amount of knights.")
-#     if bKingChecker > 1:
-#         print("Black team has more than the usual amount of kings.")
-#     if bQueenChecker > 1:
-#         print("Black team has more than the usual amount of queens.")
-#     if bPawnChecker > 8:
-#         print("Black team has more than the usual amount of pawns.")
-    return
-
-
-    return
-
 def isValidChessBoard(toCheckPieces, toCheckSpots):
     if (True == toCheckPieces) and (True == toCheckSpots):
         return True
@@ -180,6 +108,7 @@ chessBoard = {
     'G1': 'wKnight' , 'G2': 'wPawn' , 'G3': '' , 'G4': '' , 'G5': '' , 'G6': '' , 'G7': 'bPawn' , 'G8': 'bKnight', 
     'H1': 'wRook' , 'H2': 'wPawn' , 'H3': '' , 'H4': '' , 'H5': '' , 'H6': '' , 'H7': 'bPawn' , 'H8': 'bRook'
 }    
+
 checker1 = checkPieces(chessBoard)
 checker2= checkSpots(chessBoard)
 print(isValidChessBoard(checker1, checker2))
