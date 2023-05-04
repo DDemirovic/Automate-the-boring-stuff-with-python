@@ -21,9 +21,26 @@ List .sort Keywörter
 
 \ in einer Zeile ist quasi ein "ignorier das Ende vom Block, es geht noch weiter" (damit es leserlicher wird)
 
-dictionary
 
-	countries={"Ghana": "Accra", "China": "Beijing"}
-	# using the del keyword
-	del countries["China"]
-	nun ist countries ={"Ghana": "Accra}
+								dictionary
+
+countries={"Ghana": "Accra", "China": "Beijing"}
+# using the del keyword
+del countries["China"]
+nun ist countries ={"Ghana": "Accra"}
+
+
+								sys.argv Methoden
+
+#Dieser Weg speichert die eingetragenen Argumente in eine separate Liste, falls damit noch was gemacht werden soll
+listOfSystemArguments = []
+for i in range(1,len(sys.argv)):        #excludes sys.argv[0], because [0] = name of that program, so the arguments are stored at [1] until the end
+    listOfSystemArguments.append(sys.argv[i])
+
+
+#Falls nur die Liste geprintet werden soll
+print(sys.argv[1:])
+
+#[0] wird gelöscht, weil das der Name des Programms ist, hilft (aktuell) eher weniger wenn man mit den Argumentieren arbeiten will
+del sys.argv[0]
+//do some more stuff
