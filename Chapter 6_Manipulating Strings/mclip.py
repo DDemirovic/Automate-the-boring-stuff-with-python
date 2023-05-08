@@ -23,4 +23,4 @@ if keyphrase in Text:
     pyperclip.copy(Text[keyphrase])
     print('Text for ' + keyphrase + ' copied to clipboard.')
 else:
-    print('There is no text for ' + keyphrase)
+    print('There is no text for ' + keyphrase + '\n'"""Correct usage: py mclip.py 'keyphrase' - 'agree', 'busy' or 'upsell' without the ''""")
