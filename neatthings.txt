@@ -19,6 +19,7 @@ List .sort Keywörter
 	spam.sort(reverse=True) = sortiert in umgekehrter Reihenfolge
 	spam.sort(key=str.lower) = ignoriert die Standard Reihenfolge, dass uppercase immer vorm lowercase kommt (quasi ['A', 'Z', 'a', 'z'] dann wird daraus ['A', 'a', 'Z', 'z']
 
+
 \ in einer Zeile ist quasi ein "ignorier das Ende vom Block, es geht noch weiter" (damit es leserlicher wird)
 
 
