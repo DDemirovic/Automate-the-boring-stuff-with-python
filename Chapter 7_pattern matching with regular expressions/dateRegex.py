@@ -44,7 +44,6 @@ def dateChecker(someDay, someMonth, someYear):
 
 def deleteEntries(alldates, someDay, someMonth, someYear, entriesList):
     for entry in reversed(entriesList):
-        #print(f"entry: {entry}\nsomeDay[{entry}]: {someDay[entry]}\nsomeMonth[{entry}]: {someMonth[entry]}\nsomeYear[{entry}]: {someYear[entry]}")
         del allDates[entry]
         del someDay[entry]
         del someMonth[entry]
@@ -70,11 +69,13 @@ i = 11 negativer Monat 12/-5/2022
 #create regex for dates
 dateRegex = re.compile(r'''                       #Generally: this pattern should group only the whole date, the day, the month and the year (4 matches in total), indicated by (?:)
                                                   #Match[0] = full date, match[1] = only day, match[2] = only month, match[3] = only year
-                       (((?:\d)?\d)               #Day, singular days accepted, e.g 4 (because 4.7.2000 is a valid date)
-                       (?:/|\.)                   #accepted seperators: / and . (19/04/1993 or 19.04.1993)
-                       ((?:\d)?\d)                #Month, same as for days 
+                       (
+                       ((?:-)?(?:\d)?\d)                #Day, singular days accepted, e.g 4 (because 4.7.2000 is a valid date)
+                       (?:/|\.)                   #accepted seperators: "/" and "." (19/04/1993 or 19.04.1993)
+                       ((?:-)?(?:\d)?\d)                #Month, same as for days 
                        (?:/|\.)                   #same seperators
-                       (\d\d\d\d))                #year (earliest year allowed: 1000)
+                       (\d\d\d\d)                 #year (earliest year allowed: 1000)
+                       )                
                        ''', re.VERBOSE)
 
 extractedDates = dateRegex.findall(string)
@@ -82,17 +83,5 @@ allDates = appendingExtractedDates(extractedDates,0)
 allDays = appendingExtractedDates(extractedDates,1)
 allMonths = appendingExtractedDates(extractedDates,2)
 allYears = appendingExtractedDates(extractedDates,3)
-print("Listen nach der regex Suche:")
-print(f"extractedDates: {extractedDates}")
-print(f"allDates: {allDates}")
-print(f"allDays: {allDays}")
-print(f"allMonths: {allMonths}")
-print(f"allYears: {allYears}")
 badEntries = dateChecker(allDays, allMonths, allYears)
-print(f"badEntries: {badEntries}")
 deleteEntries(allDates, allDays, allMonths, allYears, badEntries)
-print("Listen nach dateChecker:")
-print(f"allDates: {allDates}")
-print(f"allDays: {allDays}")
-print(f"allMonths: {allMonths}")
-print(f"allYears: {allYears}")
