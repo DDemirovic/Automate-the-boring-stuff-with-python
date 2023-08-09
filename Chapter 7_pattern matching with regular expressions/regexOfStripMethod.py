@@ -11,9 +11,11 @@ def strippingRegex():
         toStripCharacterEnd = "\s+$"
         return toStripCharacterStart, toStripCharacterEnd
     else:
-        toStripCharacterStart = "^("
-        toStripCharacterEnd = ")+$"
+        #initializing regex start and end
+        toStripCharacterStart = "^("            #template: ^(...)
+        toStripCharacterEnd = ")+$"             #template: (...)$
         i = 0
+        #loop that iterates over every character of that string
         for character in toStripCharacter:
             #regex cannot start with a | => e.g ^(|e|x|a|m|p|l|e), this is an invalid regex
             if 0 == i:
@@ -39,9 +41,9 @@ def strippingRegex():
                     toStripCharacterStart = toStripCharacterStart + "|" + character
                     toStripCharacterEnd = "|" + character + toStripCharacterEnd
             i += 1
+        #finishing start and end regex
         toStripCharacterStart = toStripCharacterStart + ")+"
         toStripCharacterEnd = "(" + toStripCharacterEnd
-        print(f"toStripCharacterStart: {toStripCharacterStart}\ntoStripCharacterEnd: {toStripCharacterEnd}")
         return toStripCharacterStart, toStripCharacterEnd
     
     
@@ -54,8 +56,7 @@ def strippingOffString(string, stripRegexStart, stripRegexEnd):
     string = endRegex.sub("", string)
     return string
 
-myString = "    Hier bist mein Text der hoffentlich ausgetauscht wird   "
+myString = "    Hier bist mein Text der hoffentlich ausgetauscht wird.   "
 myStripRegexStart,myStripRegexEnd = strippingRegex()
-print(f"myStripRegexStart: {myStripRegexStart}\nmyStripRegexEnd: {myStripRegexEnd}")
 myString = strippingOffString(myString, myStripRegexStart, myStripRegexEnd)
 print(myString)
