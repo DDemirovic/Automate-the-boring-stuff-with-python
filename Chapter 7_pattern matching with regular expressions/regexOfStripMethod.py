@@ -44,10 +44,8 @@ def strippingRegex():
         #finishing start and end regex
         toStripCharacterStart = toStripCharacterStart + ")+"
         toStripCharacterEnd = "(" + toStripCharacterEnd
-        return toStripCharacterStart, toStripCharacterEnd
-    
-    
-
+        return toStripCharacterStart, toStripCharacterEnd   
+        
 #stripping off the string
 def strippingOffString(string, stripRegexStart, stripRegexEnd):
     startRegex = re.compile(stripRegexStart)
