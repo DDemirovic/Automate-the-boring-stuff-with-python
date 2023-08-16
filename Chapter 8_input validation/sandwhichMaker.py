@@ -24,6 +24,7 @@ def sandwhichProcess():
 def sandwhichOrder():
     listOfIngredients = []
     howManySandwhiches = pyip.inputInt("How many sandwhiches do you want? ", min = 1)
+    #looping over the number of sandwhiches the user wants
     for _ in range(howManySandwhiches):
         bread = pyip.inputMenu(['wheat', 'white', 'sourdough'], numbered = True, prompt = "Which bread do you want?\n")
         listOfIngredients.append(bread)
