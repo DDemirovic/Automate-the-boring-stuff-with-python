@@ -2,7 +2,7 @@
 #continue/break:    break ist ein beenden des Vorgangs (Schleife/if bspw.)
 #                   continue skippt den Rest im Block und springt zum Anfang zurück
 
-# Aufgabe bei spam = 1 "Hello", spam = 2 "Howdy und bei allen anderen Werten "greetings"
+# Aufgabe bei spam = 1 "Hello", spam = 2 "Howdy" und bei allen anderen Werten "greetings"
 spam = -3
 if spam == 1:
     print('Hello')
