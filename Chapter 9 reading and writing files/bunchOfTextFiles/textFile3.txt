@@ -1,0 +1,1 @@
+Mein Programm findet hoffentlich die passende regex Test in diesem beispiel Text.

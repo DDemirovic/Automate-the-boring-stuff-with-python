@@ -45,3 +45,7 @@ print(sys.argv[1:])
 #[0] wird gelöscht, weil das der Name des Programms ist, hilft (aktuell) eher weniger wenn man mit den Argumentieren arbeiten will
 del sys.argv[0]
 //do some more stuff
+
+
+								file/directory stuff
+os.startfile(myPath)    #opens folder/file (literally, not just for the program to write/read/whatever) -change myPath with a viable OS(Windows/Linux/whatever) path 

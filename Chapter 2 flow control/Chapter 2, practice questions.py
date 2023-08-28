@@ -29,4 +29,4 @@ for i in range(1,11,1):
 # Ein Modul ist einfach eine Datei die python code enthält (wie diese hier).
 # wenn man eine Datei benutzen möchte dann einfach import DATEINAME
 # Bsp.: import beispiel
-# Um nun eine Funktion aus "beispiel" aufzurufen einfach beispiel.funktionInBeispie
+# Um nun eine Funktion aus "beispiel" aufzurufen einfach beispiel.funktionInBeispiel
